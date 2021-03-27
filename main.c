@@ -9,11 +9,11 @@ int main()
     FILE *check_password;
     FILE *password;
     
-    int file;
     int check_user=0;
     int check_pass=0;
     int username_attempts=3;
     int password_attempts=3;
+    int user_select;
     char input_username[30];
     char real_username[30];
     char input_password[30];
@@ -47,7 +47,7 @@ int main()
     }
    
     /* Welcome user to the program and prompt for username */
-    printf("Welcome to Embry Bank employee portal\n");
+    printf("Welcome to Embry Bank Employee Portal\n");
     printf("Please enter your user name: ");
     fgets(input_username, 30, stdin);
     /* Check if username matches data in file */
@@ -67,7 +67,9 @@ int main()
                 break;
             }
         }
-        exit(0);
+        if (strncmp(input_username, real_username, 5) != 0){
+            exit(0);
+        }
     }
     /* Prompt user for password and check if it matches data in file */
     printf("Please enter your password: ");
@@ -84,12 +86,22 @@ int main()
                 printf("Incorrect password, Please try again. %d attempt remaining: ", password_attempts);
             }
             fgets(input_password, 30, stdin);
-            if (strncmp(input_password, real_password, 5) == 0){
+            if (strncmp(input_password, real_password, 8) == 0){
                 break;
             }
         }
-        exit(0);
+        if (strncmp(input_password, real_password, 8) != 0){
+            exit(0);
+        }
     }
-    
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    printf("Embry Bank Employee Portal\n");
+    printf("1. Record Deposit or Withdrawl\n");
+    printf("2. Add New Client\n");
+    printf("3. View Client Transaction History\n");
+    printf("4. View Client Personal Information\n");
+    printf("5. Sign Out\n");
+    printf("Please select one of the above options: ");
+    scanf("%d", &user_select);
     return 0;
 }
