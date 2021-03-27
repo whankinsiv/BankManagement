@@ -135,6 +135,7 @@ int main()
             /* Call the add new client file. */
             case 2:
                 printf("Case 2");
+                new_client();
                 break;
 
             /* Call the view client transaction history file. */
