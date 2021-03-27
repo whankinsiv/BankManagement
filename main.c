@@ -4,6 +4,7 @@
 #include "deposit_withdrawl.h"
 #include "new_client.h"
 #include "transaction_history.h"
+#include "personal_info.h"
 
 int main()
 {
