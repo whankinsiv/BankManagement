@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "deposit_withdrawl.h"
 
 int main()
 {
@@ -127,6 +128,7 @@ int main()
             /* Call the record deposit or withdrawl file. */
             case 1:
                 printf("Case 1");
+                deposit_withdrawl();
                 break;
 
             /* Call the add new client file. */
