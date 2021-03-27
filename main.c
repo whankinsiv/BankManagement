@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "deposit_withdrawl.h"
+#include "new_client.h"
 
 int main()
 {
