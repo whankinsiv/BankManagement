@@ -1,1 +1,4 @@
-printf("Inside Deposit_wirthdrawl.c");
+#include <stdio.h>
+void deposit_withdrawl(){
+  printf("Inside Deposit_withdrawl.c");
+}
