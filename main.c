@@ -143,11 +143,13 @@ int main()
             /* Call the view client transaction history file. */
             case 3:
                 printf("Case 3");
+                transaction_history();
                 break;
 
             /* Call the view client personal information file. */
             case 4:
                 printf("Case 4");
+                personal_info();
                 break;
         }
     }
