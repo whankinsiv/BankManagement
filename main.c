@@ -13,7 +13,9 @@ int main()
     int check_pass=0;
     int username_attempts=3;
     int password_attempts=3;
-    int user_select;
+    int user_select_num;
+    char user_select[10];
+    int valid_selection;
     char input_username[30];
     char real_username[30];
     char input_password[30];
@@ -94,14 +96,54 @@ int main()
             exit(0);
         }
     }
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("Embry Bank Employee Portal\n");
-    printf("1. Record Deposit or Withdrawl\n");
-    printf("2. Add New Client\n");
-    printf("3. View Client Transaction History\n");
-    printf("4. View Client Personal Information\n");
-    printf("5. Sign Out\n");
-    printf("Please select one of the above options: ");
-    scanf("%d", &user_select);
+    /* Continue running the rest of the program until the user inputs "5" when asked to make a selection at the home menu. */
+    while (user_select_num != 5){
+        /* Display home screen and prompt user to make a selection. */
+        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        printf("Embry Bank Employee Portal\n");
+        printf("1. Record Deposit or Withdrawl\n");
+        printf("2. Add New Client\n");
+        printf("3. View Client Transaction History\n");
+        printf("4. View Client Personal Information\n");
+        printf("5. Sign Out\n");
+        printf("Please select one of the above options: ");
+        (scanf("%s", user_select));
+        user_select_num = atoi(user_select);
+        /* If the user makes an invalid choice, reprompt user. */
+        while ((user_select_num > 5) || (user_select_num < 1)){
+            printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            printf("Embry Bank Employee Portal\n");
+            printf("1. Record Deposit or Withdrawl\n");
+            printf("2. Add New Client\n");
+            printf("3. View Client Transaction History\n");
+            printf("4. View Client Personal Information\n");
+            printf("5. Sign Out\n");
+            printf("Invalid selection. Please try again: ");
+            (scanf("%s", user_select));
+            user_select_num = atoi(user_select);
+        }
+        /* Use a switch statement to pick which file to execute. */
+        switch(user_select_num){
+            /* Call the record deposit or withdrawl file. */
+            case 1:
+                printf("Case 1");
+                break;
+
+            /* Call the add new client file. */
+            case 2:
+                printf("Case 2");
+                break;
+
+            /* Call the view client transaction history file. */
+            case 3:
+                printf("Case 3");
+                break;
+
+            /* Call the view client personal information file. */
+            case 4:
+                printf("Case 4");
+                break;
+        }
+    }
     return 0;
 }
