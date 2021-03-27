@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "deposit_withdrawl.h"
 #include "new_client.h"
+#include "transaction_history.h"
 
 int main()
 {
