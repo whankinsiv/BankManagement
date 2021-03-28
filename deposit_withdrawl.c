@@ -11,12 +11,14 @@ void deposit_withdrawl(){
   char client_first_name[30];
   char client_last_inital[30];
   char repeat_function[10];
+  char client_transaction_history_name;
   int x;
   int nsf;
   int repeat_function_num;
   float balance;
   float transaction_amount;
   FILE* client_file;
+  FILE* client_transaction_history;
   
   while (repeat_function_num != 1){
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
@@ -80,9 +82,13 @@ void deposit_withdrawl(){
     client_file = fopen(client_first_name, "w");
     fprintf(client_file, "%.2f", balance);
     fclose(client_file);
+    
     /* Method to format time found on stack exchange */
     assert(strftime(current_time, sizeof(current_time), "%c", tm));
-    printf("%s\n", current_time);
+    x = strlen(client_first_name) - 3;
+    client_first_name[x+1] = '\0';
+    printf("%s", client_first_name);
+      
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
     printf("Please select from one of the above options: ");
