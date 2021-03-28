@@ -42,7 +42,10 @@ void deposit_withdrawl(){
       }
       printf("Enter client last inital: ");
       scanf("%s", client_last_inital);
-      strcat(strcat(client_first_name, "_"),strcat(client_last_inital,".txt"));
+      strcat(strcat(client_first_name, "_"),client_last_inital);
+      client_transaction_history_name = client_first_name;
+      strcat(client_first_name, ".txt");
+      
       x = strlen(client_first_name) - 3;
       for (;x>=0; x--){
         client_first_name[x] = tolower(client_first_name[x]);
@@ -85,10 +88,7 @@ void deposit_withdrawl(){
     
     /* Method to format time found on stack exchange */
     assert(strftime(current_time, sizeof(current_time), "%c", tm));
-    x = strlen(client_first_name) - 4;
-    printf("%s", client_first_name);
-    client_first_name[x] = '0';
-    printf("%s", client_first_name);
+    printf("%s," client_transaction_history_name);
       
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
