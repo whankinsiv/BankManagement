@@ -11,7 +11,7 @@ void deposit_withdrawl(){
   char client_first_name[30];
   char client_last_inital[30];
   char repeat_function[10];
-  char client_transaction_history_name;
+  char client_transaction_history_name[30];
   int x;
   int nsf;
   int repeat_function_num;
@@ -88,7 +88,7 @@ void deposit_withdrawl(){
     
     /* Method to format time found on stack exchange */
     assert(strftime(current_time, sizeof(current_time), "%c", tm));
-    printf("%s," client_transaction_history_name);
+    printf("%s", client_transaction_history_name);
       
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
