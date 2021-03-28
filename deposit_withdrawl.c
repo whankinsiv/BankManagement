@@ -43,7 +43,8 @@ void deposit_withdrawl(){
       printf("Enter client last inital: ");
       scanf("%s", client_last_inital);
       strcat(strcat(client_first_name, "_"),client_last_inital);
-      client_transaction_history_name = client_first_name;
+      strcpy(client_transaction_history_name, client_first_name);
+      strcat(client_transaction_history_name, ".txt"
       strcat(client_first_name, ".txt");
       
       x = strlen(client_first_name) - 3;
