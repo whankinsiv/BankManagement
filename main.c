@@ -25,27 +25,27 @@ int main()
     char real_password[30];
     
     /* Check if the username file exists. */
-    if (check_username = fopen("username.txt", "r"))
+    if (check_username == fopen("username.txt", "r"))
     {
         fclose(check_username);
         check_user = 1;
     }
     /* If the username file does not exist, create the .txt file and input the
        standard username "admin". */
-    if (check_user = 1){
+    if (check_user == 1){
         username = fopen("username.txt", "w");
         fprintf(username, "%s", "admin");
         fclose(username);
     }
     /* Check if password file exists. */
-    if (check_password = fopen("password.txt", "r"))
+    if (check_password == fopen("password.txt", "r"))
     {
         fclose(check_password);
         check_pass = 1;
     }
     /* If the password file does not exist, create the .txt file  and input the
        standard password "password". */
-    if (check_pass = 1){
+    if (check_pass == 1){
         password = fopen("password.txt", "w");
         fprintf(password, "%s", "password");
         fclose(password);
