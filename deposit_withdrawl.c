@@ -113,7 +113,7 @@ void deposit_withdrawl(){
     /* Open transaction history file and write the date, transaction amount, and balance into one line. */
     client_history_file = fopen(client_transaction_history_name, "a");
     fprintf(client_history_file, "%s | Transaction Amount: %.2f | Balance: %.2f\n", current_time, transaction_amount, balance);
-    fclose(client_transaction_history_name);
+    fclose(client_history_file);
      
     /* Prompt user to select to either record another transaction or return to the main menu. */
     printf("1. Return to main menu\n");
