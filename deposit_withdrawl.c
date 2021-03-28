@@ -27,13 +27,14 @@ void deposit_withdrawl(){
     printf("Enter client last inital: ");
     scanf("%s", client_last_inital);
     strcat(strcat(client_first_name, "_"),client_last_inital);
-    strcpy(client_transaction_history_name, client_first_name);
-    strcat(client_transaction_history_name, "_history.txt");
-    strcat(client_first_name, "_balance.txt");
-    x = strlen(client_first_name) - 3;
+    x = strlen(client_first_name);
     for (;x>=0; x--){
         client_first_name[x] = tolower(client_first_name[x]);
     }
+    strcpy(client_transaction_history_name, client_first_name);
+    strcat(client_transaction_history_name, "_history.txt");
+    strcat(client_first_name, "_balance.txt");
+    
     client_file = fopen(client_first_name, "r");
     while (client_file == NULL){
       printf("Unable to locate client, please try again.\n");
@@ -46,14 +47,14 @@ void deposit_withdrawl(){
       printf("Enter client last inital: ");
       scanf("%s", client_last_inital);
       strcat(strcat(client_first_name, "_"),client_last_inital);
+      x = strlen(client_first_name);
+      for (;x>=0; x--){
+        client_first_name[x] = tolower(client_first_name[x]);
+      }
       strcpy(client_transaction_history_name, client_first_name);
       strcat(client_transaction_history_name, "_history.txt");
       strcat(client_first_name, "_balance.txt");
       
-      x = strlen(client_first_name) - 3;
-      for (;x>=0; x--){
-        client_first_name[x] = tolower(client_first_name[x]);
-      }
       client_file = fopen(client_first_name, "r");
     }
     fscanf(client_file, "%f", &balance);
