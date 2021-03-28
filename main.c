@@ -25,7 +25,8 @@ int main()
     char real_password[30];
     
     /* Check if the username file exists. */
-    if (check_username == fopen("username.txt", "r"))
+    check_username = fopen("username.txt", "r")
+    if (check_username == 1)
     {
         fclose(check_username);
         check_user = 1;
@@ -38,7 +39,8 @@ int main()
         fclose(username);
     }
     /* Check if password file exists. */
-    if (check_password == fopen("password.txt", "r"))
+    check_password = fopen("password.txt", "r")
+    if (check_password == 1)
     {
         fclose(check_password);
         check_pass = 1;
