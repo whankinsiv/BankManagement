@@ -9,7 +9,6 @@ void deposit_withdrawl(){
   float balance;
   int nsf;
   float transaction_amount;
-  char file_lowercase[30];
   FILE* client_file;
   printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
   printf("Enter client first name: ");
