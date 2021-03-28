@@ -86,7 +86,7 @@ void deposit_withdrawl(){
     /* Method to format time found on stack exchange */
     assert(strftime(current_time, sizeof(current_time), "%c", tm));
     x = strlen(client_first_name) - 4;
-    client_first_name[x] = '\0';
+    client_first_name[x] = '0';
     printf("%s", client_first_name);
       
     printf("1. Return to main menu\n");
