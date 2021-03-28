@@ -78,14 +78,14 @@ void deposit_withdrawl(){
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
     scanf("%s", repeat_function);
-    repeat_function_num = atoi(user_select);
+    repeat_function_num = atoi(repeat_function);
     while ((repeat_function_num < 1) || (repeat_function_num > 2)){
-      printf("Invalid input. Please try again.
+      printf("Invalid input. Please try again.\n");
       printf("Please select from the following Options:\n");
       printf("1. Return to main menu\n");
       printf("2. Record tranaction for another client\n");
       scanf("%s", repeat_function);
-      repeat_function_num = atoi(user_select);
+      repeat_function_num = atoi(repeat_function);
     }
   }
 }
