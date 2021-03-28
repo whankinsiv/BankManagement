@@ -74,6 +74,7 @@ void deposit_withdrawl(){
     printf("Updated balance after transaction: $%.2f\n\n", balance);
     client_file = fopen(client_first_name, "w");
     fprintf(client_file, "%.2f", balance);
+    fclose(client_file);
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
     printf("Please select from one of the above options: ");
