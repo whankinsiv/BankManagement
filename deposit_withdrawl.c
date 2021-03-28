@@ -18,7 +18,7 @@ void deposit_withdrawl(){
   float balance;
   float transaction_amount;
   FILE* client_file;
-  FILE* client_transaction_history;
+  FILE* client_history_file;
   
   while (repeat_function_num != 1){
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
@@ -93,7 +93,9 @@ void deposit_withdrawl(){
     
     /* Method to format time found on stack exchange */
     assert(strftime(current_time, sizeof(current_time), "%c", tm));
-    printf("%s\n", client_transaction_history_name);
+    
+    client_history_file = fopen(client_transaction_history_name, "a");
+    fprintf(client_history_file, "%s\n Transaction Amount: %d", current_time, transaction_amount);
       
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
