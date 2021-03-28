@@ -19,7 +19,6 @@ int main()
     int password_attempts=3;
     int user_select_num;
     char user_select[10];
-    int valid_selection;
     char input_username[30];
     char real_username[30];
     char input_password[30];
