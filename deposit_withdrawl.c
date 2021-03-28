@@ -44,7 +44,7 @@ void deposit_withdrawl(){
       scanf("%s", client_last_inital);
       strcat(strcat(client_first_name, "_"),client_last_inital);
       strcpy(client_transaction_history_name, client_first_name);
-      strcat(client_transaction_history_name, ".txt");
+      strcat(client_transaction_history_name, "_history.txt");
       strcat(client_first_name, ".txt");
       
       x = strlen(client_first_name) - 3;
@@ -89,7 +89,7 @@ void deposit_withdrawl(){
     
     /* Method to format time found on stack exchange */
     assert(strftime(current_time, sizeof(current_time), "%c", tm));
-    printf("%s", client_transaction_history_name);
+    printf("%s\n", client_transaction_history_name);
       
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
