@@ -74,17 +74,17 @@ void deposit_withdrawl(){
     printf("Updated balance after transaction: $%.2f\n\n", balance);
     client_file = fopen(client_first_name, "w");
     fprintf(client_file, "%.2f", balance);
-    printf("Please select from the following Options:\n");
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
+    printf("Please select from one of the above options: ");
     scanf("%s", repeat_function);
     repeat_function_num = atoi(repeat_function);
     while ((repeat_function_num < 1) || (repeat_function_num > 2)){
       printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
       printf("Invalid input. Please try again.\n");
-      printf("Please select from the following Options:\n");
       printf("1. Return to main menu\n");
       printf("2. Record tranaction for another client\n");
+      printf("Please select from one of the above options: ");
       scanf("%s", repeat_function);
       repeat_function_num = atoi(repeat_function);
     }
