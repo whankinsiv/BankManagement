@@ -26,7 +26,10 @@ void deposit_withdrawl(){
     scanf("%s", client_first_name);
     printf("Enter client last inital: ");
     scanf("%s", client_last_inital);
-    strcat(strcat(client_first_name, "_"),strcat(client_last_inital,".txt"));
+    strcat(strcat(client_first_name, "_"),client_last_inital);
+    strcpy(client_transaction_history_name, client_first_name);
+    strcat(client_transaction_history_name, "_history.txt");
+    strcat(client_first_name, "_balance.txt");
     x = strlen(client_first_name) - 3;
     for (;x>=0; x--){
         client_first_name[x] = tolower(client_first_name[x]);
@@ -45,7 +48,7 @@ void deposit_withdrawl(){
       strcat(strcat(client_first_name, "_"),client_last_inital);
       strcpy(client_transaction_history_name, client_first_name);
       strcat(client_transaction_history_name, "_history.txt");
-      strcat(client_first_name, ".txt");
+      strcat(client_first_name, "_balance.txt");
       
       x = strlen(client_first_name) - 3;
       for (;x>=0; x--){
