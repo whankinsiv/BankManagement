@@ -95,7 +95,7 @@ void deposit_withdrawl(){
     assert(strftime(current_time, sizeof(current_time), "%c", tm));
     
     client_history_file = fopen(client_transaction_history_name, "a");
-    fprintf(client_history_file, "%s | Transaction Amount: %f | Balance: %f\n", current_time, transaction_amount, balance);
+    fprintf(client_history_file, "%s | Transaction Amount: %.2f | Balance: %.2f\n", current_time, transaction_amount, balance);
       
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
