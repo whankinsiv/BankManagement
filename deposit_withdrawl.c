@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <assert.h>
 void deposit_withdrawl(){
+  time_t t = time(NULL);
+  struct tm *tm = localtime(&t);
+  char current_time[64];
   char client_first_name[30];
   char client_last_inital[30];
   char repeat_function[10];
@@ -75,6 +79,9 @@ void deposit_withdrawl(){
     client_file = fopen(client_first_name, "w");
     fprintf(client_file, "%.2f", balance);
     fclose(client_file);
+    /* Method to format time found on stack exchange */
+    assert(strftime(current_time, sizeof(current_time), "%c", tm));
+    printf("%s\n", current_time);
     printf("1. Return to main menu\n");
     printf("2. Record tranaction for another client\n");
     printf("Please select from one of the above options: ");
