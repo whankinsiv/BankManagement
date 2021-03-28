@@ -44,7 +44,7 @@ void deposit_withdrawl(){
       scanf("%s", client_last_inital);
       strcat(strcat(client_first_name, "_"),client_last_inital);
       strcpy(client_transaction_history_name, client_first_name);
-      strcat(client_transaction_history_name, ".txt"
+      strcat(client_transaction_history_name, ".txt");
       strcat(client_first_name, ".txt");
       
       x = strlen(client_first_name) - 3;
