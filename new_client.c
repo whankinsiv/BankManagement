@@ -51,7 +51,7 @@ void new_client(){
     client_balance_file = fopen(client_balance_file_name, "r");
     if (client_balance_file != NULL){
       printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-      printf("Error. Client this this name already exists.\n");
+      printf("Error. Client with this name already exists.\n");
       printf("1. Input different client information\n");
       printf("2. Return to main menu\n");
       printf("Please select from the above options: ");
