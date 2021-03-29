@@ -21,7 +21,7 @@ void new_client(){
   int client_phone_number;
   char client_email_address[30];
   int client_age;
-  int repeat_script;
+  int repeat_script = 1;
   int x;
   char client_select[10];
   int client_select_num = 1;
