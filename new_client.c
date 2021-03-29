@@ -32,7 +32,7 @@ void new_client(){
     printf("Client first name: ");
     scanf("%s", client_first_name);
     printf("Client last initial: ");
-    scanf("%1s", client_last_inital);
+    fgets(client_last_inital, 1, stdin);
     printf("Client phone number: ");
     scanf("%d", &client_phone_number);
     printf("Client email address: ");
@@ -96,7 +96,7 @@ void new_client(){
   /* Client personal info file. */
   client_personal_file = fopen(client_personal_file_name, "w");
   fprintf(client_personal_file, "First Name: %s\n", client_first_name);
-  fprintf(client_personal_file, "Last Initial: %1s\n", client_last_inital);
+  fprintf(client_personal_file, "Last Initial: %s\n", client_last_inital);
   fprintf(client_personal_file, "Age: %d\n", client_age);
   fprintf(client_personal_file, "Phone Number: %d\n", client_phone_number);
   fprintf(client_personal_file, "Email: %s\n", client_email_address);
