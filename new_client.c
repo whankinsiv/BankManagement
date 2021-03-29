@@ -77,7 +77,7 @@ void new_client(){
   /* Create files for the new client */
   /* Client balance file. Initialize balance to 0.00 */
   client_balance_file = fopen(client_balance_file_name, "w");
-  fprintf(client_balance_file, "%f", "0.00")
+  fprintf(client_balance_file, "%f", 0.00);
   fclose(client_balance_file);
   
  
