@@ -21,6 +21,7 @@ void new_client(){
   
   /* Gather information about client and store in respective variables. */
   while (client_select_num == 1) {
+    client_select_num = 0;
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     printf("Please answer the following questions regaurding the new client.\n");
     printf("Client first name: ");
