@@ -2,8 +2,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <assert.h>
+#include <time.h>
 
 void new_client(){
+  time_t t = time(NULL);
+  struct tm *tm = localtime(&t);
+  char current_time[64];
   FILE* client_balance_file;
   FILE* client_history_file;
   FILE* client_personal_file;
@@ -79,6 +84,14 @@ void new_client(){
   client_balance_file = fopen(client_balance_file_name, "w");
   fprintf(client_balance_file, "%.2f", 0.00);
   fclose(client_balance_file);
+  
+  /* Client transaction history file. Initalize with current date and balance of 0. */
+  client_history_file = fopen(client_history_file_name, "w");
+  /* Get the current date and time in string format */
+  /* Method to format time found on stack exchange */
+  assert(strftime(current_time, sizeof(current_time), "%c", tm));
+  fprintf(client_history_file, "%s | Transaction Amount: $0.00 | Balance: $0.00", current_time);
+  fclose(client_history_file);
   
  
 }
