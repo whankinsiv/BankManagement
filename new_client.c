@@ -18,10 +18,10 @@ void new_client(){
   int x;
   char client_select[10];
   int client_select_num;
-  int existing_client;
+  int existing_client = 1;
   
   /* Gather information about client and store in respective variables. */
-  do {
+  while (existing_client == 1) {
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     printf("Please answer the following questions regaurding the new client.\n");
     printf("Client first name: ");
@@ -73,6 +73,6 @@ void new_client(){
       }
       client_select_num = 1;
     }
-  }while(existing_client == 1);
+  }
  
 }
