@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 void new_client(){
   FILE* client_balance_file;
@@ -20,7 +21,7 @@ void new_client(){
   int existing_client;
   
   /* Gather information about client and store in respective variables. */
-  do{
+  do {
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     printf("Please answer the following questions regaurding the new client.\n");
     printf("Client first name: ");
@@ -72,6 +73,6 @@ void new_client(){
       }
       client_select_num = 1;
     }
-  }while (existing_client == 1);
+  }while(existing_client == 1);
  
 }
