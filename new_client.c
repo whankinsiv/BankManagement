@@ -51,6 +51,7 @@ void new_client(){
     /* Check if a balance file already exists under this name to see if the client already has an account. */
     client_balance_file = fopen(client_balance_file_name, "r");
     if (client_balance_file != NULL){
+      fclose(client_balance_file_name);
       printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
       printf("Error. Client with this name already exists.\n");
       printf("1. Input different client information\n");
@@ -73,5 +74,11 @@ void new_client(){
       client_select_num = 1;
     }
   }
+  /* Create files for the new client */
+  /* Client balance file. Initialize balance to 0.00 */
+  client_balance_file = fopen(client_balance_file_name, "w");
+  fprintf(client_balance_file, "%f", "0.00")
+  fclose(client_balance_file);
+  
  
 }
