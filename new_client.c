@@ -93,5 +93,13 @@ void new_client(){
   fprintf(client_history_file, "%s | Transaction Amount: $0.00 | Balance: $0.00", current_time);
   fclose(client_history_file);
   
+  /* Client personal info file. */
+  client_personal_file = fopen(client_personal_file_name, "w");
+  fprintf(client_personal_file, "First Name: %s\n", client_first_name);
+  fprintf(client_personal_file, "Last Initial: %s\n", client_last_initial);
+  fprintf(client_personal_file, "Age: %d\n", client_age);
+  fprintf(client_personal_file, "Phone Number: %d\n", client_phone_number);
+  fprintf(client_personal_file, "Email: %s\n", client_email_address);
+  fclose(client_personal_file);
  
 }
