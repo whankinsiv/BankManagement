@@ -35,9 +35,9 @@ void new_client(){
   for (;x>=0; x--){
     client_first_name[x] = tolower(client_first_name[x]);
   }
-  client_balance_file_name = client_first_name;
-  client_history_file_name = client_first_name;
-  client_personal_file_name = client_first_name;
+  strcpy(client_balance_file_name, client_first_name);
+  strcpy(client_history_file_name, client_first_name);
+  strcpy(client_personal_file_name, client_first_name);
   strcat(client_balance_file_name, "_balance.txt");
   strcat(client_history_file_name, "_history.txt");
   strcat(client_personal_file_name, "_info.txt");
