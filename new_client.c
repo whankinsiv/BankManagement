@@ -13,6 +13,7 @@ void new_client(){
   FILE* client_history_file;
   FILE* client_personal_file;
   char client_first_name[30];
+  char client_first_name_real[30];
   char client_last_inital[30];
   char client_balance_file_name[30];
   char client_history_file_name[30];
@@ -31,8 +32,9 @@ void new_client(){
     printf("Please answer the following questions regaurding the new client.\n");
     printf("Client first name: ");
     scanf("%s", client_first_name);
+    strcpy(client_first_name_real, client_first_name);
     printf("Client last initial: ");
-    fgets(client_last_inital, 1, stdin);
+    scanf("%s", client_last_inital);
     printf("Client phone number: ");
     scanf("%d", &client_phone_number);
     printf("Client email address: ");
@@ -95,7 +97,7 @@ void new_client(){
   
   /* Client personal info file. */
   client_personal_file = fopen(client_personal_file_name, "w");
-  fprintf(client_personal_file, "First Name: %s\n", client_first_name);
+  fprintf(client_personal_file, "First Name: %s\n", client_first_name_real);
   fprintf(client_personal_file, "Last Initial: %s\n", client_last_inital);
   fprintf(client_personal_file, "Age: %d\n", client_age);
   fprintf(client_personal_file, "Phone Number: %d\n", client_phone_number);
@@ -103,6 +105,6 @@ void new_client(){
   fclose(client_personal_file);
   
   /* Alert user that client account has successfully been created. */
-  printf("%s %s's Account has successfully been created!", client_first_name, client_last_inital);
+  printf("%s %s's Account has successfully been created!", client_first_name_real, client_last_inital);
  
 }
