@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 void new_client(){
   FILE* client_balance_file;
   FILE* client_history_file;
@@ -24,7 +26,7 @@ void new_client(){
   printf("Client email address: ");
   scanf("%s", client_email_address);
   printf("Client age: ");
-  scanf("%d", client_age);
+  scanf("%d", &client_age);
   
   /* Get correct file names to be generated for the client */
   strcat(strcat(client_first_name, "_"),client_last_inital);
