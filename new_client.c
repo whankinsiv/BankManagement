@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void new_client(){
   FILE* client_balance_file;
@@ -71,8 +72,8 @@ void new_client(){
         return;
       }
     if (client_select_num == 1){
-      existing_client == 1;
+      existing_client = 1;
     }
-  } while (existing_client == 1)
+  } while (existing_client == 1);
  
 }
