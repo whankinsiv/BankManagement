@@ -58,7 +58,6 @@ void new_client(){
       printf("Please select from the above options: ");
       scanf("%s", client_select);
       client_select_num = atoi(client_select);
-      }
       while ((client_select_num < 1) || (client_select_num > 2)){
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         printf("Invalid input. Please try again.\n");
