@@ -17,11 +17,10 @@ void new_client(){
   int client_age;
   int x;
   char client_select[10];
-  int client_select_num;
-  int existing_client = 1;
+  int client_select_num = 1;
   
   /* Gather information about client and store in respective variables. */
-  while (existing_client == 1) {
+  while (client_select_num == 1) {
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     printf("Please answer the following questions regaurding the new client.\n");
     printf("Client first name: ");
@@ -50,7 +49,6 @@ void new_client(){
 
     /* Check if a balance file already exists under this name to see if the client already has an account. */
     client_balance_file = fopen(client_balance_file_name, "r");
-    existing_client = 0;
     if (client_balance_file != NULL){
       printf("Error. Client this this name already exists.\n");
       printf("1. Input different client information\n");
