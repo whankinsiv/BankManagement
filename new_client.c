@@ -50,13 +50,14 @@ void new_client(){
     /* Check if a balance file already exists under this name to see if the client already has an account. */
     client_balance_file = fopen(client_balance_file_name, "r");
     existing_client = 0;
-    while (client_balance_file != NULL){
+    if (client_balance_file != NULL){
       printf("Error. Client this this name already exists.\n");
       printf("1. Input different client information\n");
       printf("2. Return to main menu\n");
       printf("Please select from the above options: ");
       scanf("%s", client_select);
       client_select_num = atoi(client_select);
+      }
       while ((client_select_num < 1) || (client_select_num > 2)){
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         printf("Invalid input. Please try again.\n");
@@ -66,13 +67,10 @@ void new_client(){
         scanf("%s", client_select);
         client_select_num = atoi(client_select);
       }
-
-    }
-    if (client_select_num == 2){
+      if (client_select_num == 2){
         return;
       }
-    if (client_select_num == 1){
-      existing_client = 1;
+      client_select_num = 1;
     }
   } while (existing_client == 1);
  
