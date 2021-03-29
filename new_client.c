@@ -94,7 +94,7 @@ void new_client(){
     /* Get the current date and time in string format */
     /* Method to format time found on stack exchange */
     assert(strftime(current_time, sizeof(current_time), "%c", tm));
-    fprintf(client_history_file, "%s | Transaction Amount: $0.00 | Balance: $0.00", current_time);
+    fprintf(client_history_file, "%s | Transaction Amount: $0.00 | Balance: $0.00\n", current_time);
     fclose(client_history_file);
 
     /* Client personal info file. */
