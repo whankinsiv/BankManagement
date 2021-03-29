@@ -13,6 +13,7 @@ void new_client(){
   int client_phone_number;
   char client_email_address[30];
   int client_age;
+  int x;
   
   /* Gather information about client and store in respective variables. */
   printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
@@ -30,6 +31,10 @@ void new_client(){
   
   /* Get correct file names to be generated for the client */
   strcat(strcat(client_first_name, "_"),client_last_inital);
+  x = strlen(client_first_name);
+  for (;x>=0; x--){
+    client_first_name[x] = tolower(client_first_name[x]);
+  }
   printf("%s", client_first_name);
  
 }
