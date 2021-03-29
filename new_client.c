@@ -72,6 +72,6 @@ void new_client(){
       }
       client_select_num = 1;
     }
-  } while (existing_client == 1);
+  }while (existing_client == 1);
  
 }
