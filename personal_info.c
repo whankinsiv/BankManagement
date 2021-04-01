@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 void personal_info(){
+  int x;
   char client_first_name[30];
   char client_last_inital[30];
   
