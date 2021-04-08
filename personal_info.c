@@ -38,7 +38,11 @@ void personal_info(){
       printf("Enter Q to quit search\n");
       printf("Enter client first name: ");
       scanf("%s", client_first_name);
-      quit_search_lower = tolower(client_first_name);
+      x = strlen(client_first_name);
+      for (;x>=0; x--){
+        client_first_name[x] = tolower(client_first_name[x]);
+      }
+      quit_search_lower = client_first_name
       if (strcmp(quit_search_lower, "q") == 0){
         return;
       }
