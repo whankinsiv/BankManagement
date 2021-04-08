@@ -42,10 +42,12 @@ void transaction_history(){
   }
   x=0;
   while (fscanf(client_history_file, "%s" ,current_file_line) != EOF){
-    for(;x<19;x++){
     printf("%s\n", current_file_line);
+    x++;
+    if (x==19){
+      printf("\n");
+      x=0;
     }
-    x=0;
   }
   
 }
