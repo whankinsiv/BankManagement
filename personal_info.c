@@ -44,7 +44,7 @@ void personal_info(){
     strcat(client_first_name, "_info.txt");
     client_file = fopen(client_first_name, "r");
   }
-  fscanf(client_file, "%s\n%s\n%d\n%d\ns", first_name_from_file, last_inital_from_file, &age_from_file, &number_from_file, email_from_file);  
+  fscanf(client_file, "%s\n%s\n%d\n%d\n%s", first_name_from_file, last_inital_from_file, &age_from_file, &number_from_file, email_from_file);  
   printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
   printf("Client successfully located.\n");
   printf("Personal Information is displayed below.\n");
