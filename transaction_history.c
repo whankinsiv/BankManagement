@@ -35,7 +35,7 @@ void transaction_history(){
       for (;x>=0; x--){
         client_first_name[x] = tolower(client_first_name[x]);
       }
-      strcat(client_transaction_history_name, "_history.txt");
+      strcat(client_first_name, "_history.txt");
       
       client_history_file = fopen(client_first_name, "r");
   }
