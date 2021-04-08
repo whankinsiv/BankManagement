@@ -20,7 +20,7 @@ void transaction_history(){
   }
   strcat(client_first_name, "_history.txt");
   client_history_file = fopen(client_first_name, "r");
-  while (client_hisotry_file == NULL){
+  while (client_history_file == NULL){
       printf("Unable to locate client, please try again.\n");
       printf("Enter Q to quit search\n");
       printf("Enter client first name: ");
