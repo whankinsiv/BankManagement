@@ -42,7 +42,7 @@ void personal_info(){
       for (;x>=0; x--){
         client_first_name[x] = tolower(client_first_name[x]);
       }
-      quit_search_lower = client_first_name
+      strcpy(quit_search_lower, client_first_name);
       if (strcmp(quit_search_lower, "q") == 0){
         return;
       }
