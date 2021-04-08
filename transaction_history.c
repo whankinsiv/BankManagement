@@ -7,6 +7,7 @@ void transaction_history(){
   char client_first_name[30];
   char client_last_inital[30];
   int x;
+  printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
   printf("Enter client first name: ");
   scanf("%s", client_first_name);
   printf("Enter client last inital: ");
