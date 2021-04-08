@@ -18,7 +18,7 @@ void new_client(){
   char client_balance_file_name[30];
   char client_history_file_name[30];
   char client_personal_file_name[30];
-  int client_phone_number;
+  char client_phone_number[30];
   char client_email_address[30];
   int client_age;
   int repeat_script = 1;
@@ -38,7 +38,7 @@ void new_client(){
       printf("Client last initial: ");
       scanf("%s", client_last_inital);
       printf("Client phone number: ");
-      scanf("%d", &client_phone_number);
+      scanf("%s", client_phone_number);
       printf("Client email address: ");
       scanf("%s", client_email_address);
       printf("Client age: ");
@@ -102,7 +102,7 @@ void new_client(){
     fprintf(client_personal_file, "%s\n", client_first_name_real);
     fprintf(client_personal_file, "%s\n", client_last_inital);
     fprintf(client_personal_file, "%d\n", client_age);
-    fprintf(client_personal_file, "%d\n", client_phone_number);
+    fprintf(client_personal_file, "%s\n", client_phone_number);
     fprintf(client_personal_file, "%s\n", client_email_address);
     fclose(client_personal_file);
 
