@@ -40,8 +40,12 @@ void transaction_history(){
       
       client_history_file = fopen(client_first_name, "r");
   }
+  x=0;
   while (fscanf(client_history_file, "%s" ,current_file_line) != EOF){
+    for(;x<19;x++){
     printf("%s\n", current_file_line);
+    }
+    x=0;
   }
   
 }
