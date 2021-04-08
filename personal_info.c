@@ -12,6 +12,7 @@ void personal_info(){
   int age_from_file;
   char number_from_file[30];
   char email_from_file[50];
+  char quit_search_lower[20];
   char client_select[10];
   int client_select_num = 1;
   int repeat_script = 1;
@@ -37,6 +38,10 @@ void personal_info(){
       printf("Enter Q to quit search\n");
       printf("Enter client first name: ");
       scanf("%s", client_first_name);
+      quit_search_lower = tolower(client_first_name);
+      if (quit_search_lower == 'q'){
+        return;
+      }
       printf("Enter client last inital: ");
       scanf("%s", client_last_inital);
       strcat(strcat(client_first_name, "_"),client_last_inital);
