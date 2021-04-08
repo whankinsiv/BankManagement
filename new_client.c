@@ -99,11 +99,11 @@ void new_client(){
 
     /* Client personal info file. */
     client_personal_file = fopen(client_personal_file_name, "w");
-    fprintf(client_personal_file, "First Name: %s\n", client_first_name_real);
-    fprintf(client_personal_file, "Last Initial: %s\n", client_last_inital);
-    fprintf(client_personal_file, "Age: %d\n", client_age);
-    fprintf(client_personal_file, "Phone Number: %d\n", client_phone_number);
-    fprintf(client_personal_file, "Email: %s\n", client_email_address);
+    fprintf(client_personal_file, "%s\n", client_first_name_real);
+    fprintf(client_personal_file, "%s\n", client_last_inital);
+    fprintf(client_personal_file, "%d\n", client_age);
+    fprintf(client_personal_file, "%d\n", client_phone_number);
+    fprintf(client_personal_file, "%s\n", client_email_address);
     fclose(client_personal_file);
 
     /* Alert user that client account has successfully been created. */
