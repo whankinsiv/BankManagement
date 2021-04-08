@@ -15,7 +15,7 @@ void deposit_withdrawl(){
   char client_transaction_history_name[30];
   int x;
   int nsf;
-  int repeat_function_num;
+  int repeat_function_num=1;
   float balance;
   float transaction_amount;
   FILE* client_file;
