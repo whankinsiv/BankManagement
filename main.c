@@ -127,25 +127,21 @@ int main()
         switch(user_select_num){
             /* Call the record deposit or withdrawl file. */
             case 1:
-                printf("Case 1");
                 deposit_withdrawl();
                 break;
 
             /* Call the add new client file. */
             case 2:
-                printf("Case 2");
                 new_client();
                 break;
 
             /* Call the view client transaction history file. */
             case 3:
-                printf("Case 3");
                 transaction_history();
                 break;
 
             /* Call the view client personal information file. */
             case 4:
-                printf("Case 4");
                 personal_info();
                 break;
         }
