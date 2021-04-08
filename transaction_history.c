@@ -7,6 +7,7 @@ void transaction_history(){
   int repeat_script = 1;
   char client_first_name[30];
   char client_last_inital[30];
+  char current_file_line[100];
   int x;
   printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
   printf("Enter client first name: ");
@@ -38,6 +39,9 @@ void transaction_history(){
       strcat(client_first_name, "_history.txt");
       
       client_history_file = fopen(client_first_name, "r");
+  }
+  while (fscanf(client_history_file, "%s" ,current_file_line) != EOF){
+    printf("%s", current_file_line);
   }
   
 }
