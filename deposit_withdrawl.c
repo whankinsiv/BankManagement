@@ -22,7 +22,7 @@ void deposit_withdrawl(){
   FILE* client_history_file;
   
   /* This first while loop will be used to determine when to go back to the main menu */
-  while (repeat_function_num != 1){
+  while (repeat_function_num == 1){
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     /* Prompt user to enter their first name and last initial. */
     printf("Enter client first name: ");
@@ -124,8 +124,8 @@ void deposit_withdrawl(){
     while ((repeat_function_num < 1) || (repeat_function_num > 2)){
       printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
       printf("Invalid input. Please try again.\n");
-      printf("1. Return to main menu\n");
-      printf("2. Record tranaction for another client\n");
+      printf("1. Record tranaction for another client\n");
+      printf("2. Return to main menu\n");
       printf("Please select from one of the above options: ");
       scanf("%s", repeat_function);
       repeat_function_num = atoi(repeat_function);
