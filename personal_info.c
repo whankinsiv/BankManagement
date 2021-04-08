@@ -29,7 +29,7 @@ void personal_info(){
     printf("Enter client first name: ");
     scanf("%s", client_first_name);
     printf("Enter client last inital: ");
-    scanf("s", client_last_inital);
+    scanf("%s", client_last_inital);
     strcat(strcat(client_first_name, "_"),client_last_inital);
     /* Use the tolower function to get the string in lower case. */
     x = strlen(client_first_name);
