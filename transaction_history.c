@@ -41,7 +41,7 @@ void transaction_history(){
       client_history_file = fopen(client_first_name, "r");
   }
   while (fscanf(client_history_file, "%s" ,current_file_line) != EOF){
-    printf("%s", current_file_line);
+    printf("%s\n", current_file_line);
   }
   
 }
