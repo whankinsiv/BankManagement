@@ -116,8 +116,8 @@ void deposit_withdrawl(){
     fclose(client_history_file);
      
     /* Prompt user to select to either record another transaction or return to the main menu. */
-    printf("1. Return to main menu\n");
-    printf("2. Record tranaction for another client\n");
+    printf("1. Record tranaction for another client\n");
+    printf("2. Return to main menu\n");
     printf("Please select from one of the above options: ");
     scanf("%s", repeat_function);
     repeat_function_num = atoi(repeat_function);
