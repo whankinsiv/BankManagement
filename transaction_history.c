@@ -53,7 +53,7 @@ void transaction_history(){
       }
     }
     fclose(client_history_file);
-    printf("1. Search another client's history\n");
+    printf("\n1. Search another client's history\n");
     printf("2. Return to main menu\n");
     printf("Please select from the above options: ");
     scanf("%s", client_select);
