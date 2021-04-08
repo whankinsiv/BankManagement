@@ -50,7 +50,7 @@ void personal_info(){
   printf("Personal Information is displayed below.\n");
   printf("Client first name: %s\n", first_name_from_file);
   printf("Client last inital: %s\n", last_inital_from_file);
-  printf("Client age: %d\n", age_from_file);
+  printf("Client age: %d", age_from_file);
   printf("Client phone number: %s\n", number_from_file);
   printf("Client email: %s\n", email_from_file);
   
