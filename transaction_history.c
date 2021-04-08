@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
 void transaction_history(){
   int repeat_script = 1;
   char client_first_name[30];
