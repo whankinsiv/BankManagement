@@ -51,13 +51,12 @@ void personal_info(){
     fscanf(client_file, "%s\n%s\n%d\n%s\n%s", first_name_from_file, last_inital_from_file, &age_from_file, number_from_file, email_from_file);
     fclose(client_file);
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("Client successfully located.\n");
     printf("Personal Information is displayed below.\n");
     printf("Client first name: %s\n", first_name_from_file);
     printf("Client last inital: %s\n", last_inital_from_file);
     printf("Client age: %d\n", age_from_file);
     printf("Client phone number: %s\n", number_from_file);
-    printf("Client email: %s\n", email_from_file);
+    printf("Client email: %s\n\n", email_from_file);
     printf("1. Look up another client\n");
     printf("2. Return to main menu\n");
     printf("Please select from the above options: ");
