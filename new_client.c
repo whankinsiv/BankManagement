@@ -1,3 +1,10 @@
+/******************************************************************************
+
+File Name: new_client.c
+Purpose: To allow users to add new clients in the CS 125 Bank Program.
+Created By: William Hankins
+
+*******************************************************************************/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
