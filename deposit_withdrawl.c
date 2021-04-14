@@ -1,3 +1,10 @@
+/******************************************************************************
+
+File Name: deposit_withdrawl.c
+Purpose: To allow users to input deposits & withdrawls in the CS 125 Bank Program
+Created By: William Hankins
+
+*******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
