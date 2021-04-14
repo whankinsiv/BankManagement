@@ -1,3 +1,10 @@
+/******************************************************************************
+
+File Name: personal_info.c
+Purpose: To allow users to lookup client information in the CS125 Bank Program.
+Created By: William Hankins
+
+*******************************************************************************/
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
