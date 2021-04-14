@@ -1,3 +1,10 @@
+/******************************************************************************
+
+File Name: main.c
+Purpose: To act as the centeral hub for the CS 125 Bank Program. This is the main file.
+Created By: William Hankins
+
+*******************************************************************************/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
