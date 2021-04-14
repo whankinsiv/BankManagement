@@ -1,3 +1,10 @@
+/******************************************************************************
+
+File Name: transaction_history.c
+Purpose: To allow users to view client transaction history in the CS 125 Bank Program.
+Created By: William Hankins
+
+*******************************************************************************/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
